@@ -3,11 +3,11 @@ fn animal_habitat(animal: &str) -> &str {
     let identifier = if animal == "crab" {
         1
     } else if animal == "gopher" {
-        2.0
+        2
     } else if animal == "snake" {
         3
     } else {
-        "Unknown"
+        0
     };
 
     // Don't change the expression below!
@@ -22,8 +22,42 @@ fn animal_habitat(animal: &str) -> &str {
     }
 }
 
+fn animal_habitat_match(animal: &str) -> &str {
+    // TODO: Fix the compiler error in the statement below.
+    // let identifier = if animal == "crab" {
+    //     1
+    // } else if animal == "gopher" {
+    //     2
+    // } else if animal == "snake" {
+    //     3
+    // } else {
+    //     0
+    // };
+
+    // // Don't change the expression below!
+    // if identifier == 1 {
+    //     "Beach"
+    // } else if identifier == 2 {
+    //     "Burrow"
+    // } else if identifier == 3 {
+    //     "Desert"
+    // } else {
+    //     "Unknown"
+    // }
+    match animal {
+        "crab" => "Beach",
+        "gopher" => "Burrow",
+        "snake" => "Desert",
+        _ => "Unknown",
+    }
+}
+
 fn main() {
     // You can optionally experiment here.
+    let animals = ["crab", "gopher", "snake"];
+    for animal in animals {
+        println!("{}", animal_habitat(animal));
+    }
 }
 
 // Don't change the tests!
