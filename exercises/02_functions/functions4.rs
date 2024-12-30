@@ -26,6 +26,12 @@ fn say_even_or_odd(num: i64) -> String {
 
 fn main() {
     let original_price: i64 = 359;
+    let odd_even:&str = if is_even(original_price) {
+        "even"
+    } else {
+        "odd"
+    };
     println!("Your sale price is {}", sale_price(original_price));
-    print!("The price was {} and it is {}", original_price, say_even_or_odd(original_price));
+    println!("The price was {} and it is {}", original_price, say_even_or_odd(original_price));
+    println!("The price was {} and it is {}", original_price, odd_even);
 }
