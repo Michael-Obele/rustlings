@@ -5,6 +5,12 @@ fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     // Use the vector macro.
     // let v = ???;
 
+    // Use the `vec!` macro to create a vector with the elements of the array `a`.
+    // let v = vec![10, 20, 30, 40];
+
+    // Use the `to_vec` method to convert the array `a` into a vector.
+    let v = a.to_vec();
+
     (a, v)
 }
 
